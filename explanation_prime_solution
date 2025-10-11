@@ -1,0 +1,17 @@
+for the code written above , there is a loop that runs from i to √n :
+because if i have one divisor 'i' before √n , i have the divisor pair which is 'n/i' (because i*(n/i) == n) 
+for that reason we count only the divisor once and its pair second , if we take 1 , , first check give us 1%1 == 0 , so cpt = 1 , and then 1 == 1/1 , 
+so we count it once .
+the cpt still 1 , and its true , because 1 has just one divisor .
+let's take 36 :
+n = 36:
+i = 1 →  n%1 ==0 .. pair is 36/1 = 36 (different from 1) → count both (cpt = 2)
+i = 2 → n%2 ==0  ..pair is 36/2 = 18 (different from 2) → count both (cpt = 4)
+i = 3 → n%3 ==0 .. pair is 36/3 = 12 (different from 3) → count both (cpt = 6)
+i = 4 → n%4 ==0 .. pair is 36/4 = 9 (different from 4) → count both (cpt = 8)
+i = 6 → n%6 ==0 .. pair is 36/6 = 6 (SAME as 6!) → count only once (cpt = 9)
+at the end of the loop we get cpt = 9 which is true because the divisors of 9 
+are 9 (1 , 2 , 3 , 4 , 6 , 9 , 12 , 18 , 36)
+last but not least , this is code is pretty optimal for checking the integer if is prime or not .
+we check until √n , the trick of counting the divisors is clever , we count the divisor 
+ant its pair , the last one counted only once . that it !
