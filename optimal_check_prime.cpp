@@ -6,22 +6,17 @@ int main(){
     fin;
     ll cpt=0 , n;
     cin>>n;
-    for (int i=1 ; n>=i*i ; i++){ // to check only for √n (i*i<=n) == i<=√n
+    for (int i=1 ; n>=i*i ; i++){ // to check only for √n because (i*i<=n) == i<=√n
         if (n%i == 0){
             cpt++;
-            if (n/i != i){ // count only the divisor and its pair , see the second file for explanation  
+            if (n/i != i){ // count only the divisor and its pair , see the second file for explanation
                 cpt++;
             }
-            if (n>2){
+            if (cpt>2){
                 break;
             }
         }
     }
-    if (cpt == 2){
-        cout<<"YES";
-    }
-    else {
-        cout<<"NO";
-    }
+    cout<<(cpt==2 ? "YES" : "NO");
     return 0;
 }
